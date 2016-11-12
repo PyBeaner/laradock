@@ -292,12 +292,12 @@ services:
 
 ### pgAdmin Container #######################################
 
-    pgadmin:
-        build: ./pgadmin
-        ports:
-            - "5050:5050"
-        links:
-            - postgres
+    # pgadmin:
+    #     build: ./pgadmin
+    #     ports:
+    #         - "5050:5050"
+    #     links:
+    #         - postgres
 
 ### ElasticSearch Container #################################
 

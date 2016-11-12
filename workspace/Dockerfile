@@ -66,6 +66,9 @@ COPY ./composer.json /home/laradock/.composer/composer.json
 RUN chown -R laradock:laradock /home/laradock/.composer
 USER laradock
 
+# 使用中国镜像加速
+RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
 # Check if global install need to be ran
 ARG COMPOSER_GLOBAL_INSTALL=false
 ENV COMPOSER_GLOBAL_INSTALL ${COMPOSER_GLOBAL_INSTALL}
