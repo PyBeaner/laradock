@@ -68,6 +68,8 @@ USER laradock
 
 # 使用中国镜像加速
 RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
+# 在composer.json中全局安装
+# 并行下载加速（hirak/prestissimo)
 
 # Check if global install need to be ran
 ARG COMPOSER_GLOBAL_INSTALL=false
