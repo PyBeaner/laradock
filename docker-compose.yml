@@ -83,20 +83,20 @@ services:
 
 ### Apache Server Container #################################
 
-    apache2:
-        build:
-            context: ./apache2
-            args:
-                - PHP_SOCKET=php-fpm:9000
-        volumes_from:
-            - applications
-        volumes:
-            - ./logs/apache2:/var/log/apache2
-        ports:
-            - "80:80"
-            - "443:443"
-        links:
-            - php-fpm
+    # apache2:
+    #     build:
+    #         context: ./apache2
+    #         args:
+    #             - PHP_SOCKET=php-fpm:9000
+    #     volumes_from:
+    #         - applications
+    #     volumes:
+    #         - ./logs/apache2:/var/log/apache2
+    #     ports:
+    #         - "80:80"
+    #         - "443:443"
+    #     links:
+    #         - php-fpm
 
 ### HHVM Container ##########################################
 
@@ -125,17 +125,17 @@ services:
 
 ### MariaDB Container #######################################
 
-    mariadb:
-        build: ./mariadb
-        volumes:
-            - mysql:/var/lib/mysql
-        ports:
-            - "3306:3306"
-        environment:
-            MYSQL_DATABASE: homestead
-            MYSQL_USER: homestead
-            MYSQL_PASSWORD: secret
-            MYSQL_ROOT_PASSWORD: root
+    # mariadb:
+    #     build: ./mariadb
+    #     volumes:
+    #         - mysql:/var/lib/mysql
+    #     ports:
+    #         - "3306:3306"
+    #     environment:
+    #         MYSQL_DATABASE: homestead
+    #         MYSQL_USER: homestead
+    #         MYSQL_PASSWORD: secret
+    #         MYSQL_ROOT_PASSWORD: root
 
 ### PostgreSQL Container ####################################
 
@@ -231,18 +231,18 @@ services:
 
 ### RabbitMQ Container ######################################
 
-    rabbitmq:
-        build: ./rabbitmq
-        ports:
-            - "5672:5672"
-            - "15671:15671"
-            - "8080:15672"
-        privileged: true
-        environment:
-            RABBITMQ_DEFAULT_USER: guest
-            RABBITMQ_DEFAULT_PASS: guest
-        links:
-            - php-fpm
+    # rabbitmq:
+    #     build: ./rabbitmq
+    #     ports:
+    #         - "5672:5672"
+    #         - "15671:15671"
+    #         - "8080:15672"
+    #     privileged: true
+    #     environment:
+    #         RABBITMQ_DEFAULT_USER: guest
+    #         RABBITMQ_DEFAULT_PASS: guest
+    #     links:
+    #         - php-fpm
 
 ### Beanstalkd Console Container ############################
 
