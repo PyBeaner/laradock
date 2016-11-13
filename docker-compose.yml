@@ -7,7 +7,7 @@ services:
     applications:
         image: tianon/true
         volumes:
-            - /d/PhpStormProjects:/var/www
+            - /d/:/data
 #            - ../sample/:/var/www/sample
 
 ### Workspace Utilities Container ###########################

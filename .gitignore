@@ -1,4 +1,5 @@
 .idea
 /logs
 /data
+/nginx/site-available
 .env
